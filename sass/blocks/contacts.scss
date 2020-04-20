@@ -1,0 +1,29 @@
+.contacts, 
+.del{
+	display: none;
+	position: absolute;
+	top: 70px;
+	right: 120px;
+	width: 200px;
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #ff1493;
+	border-radius: 4px;
+	z-index: 5;
+}
+.del{
+	right: 20px;
+}
+.contacts__list,
+.del__list{
+	list-style: none;
+}
+.contacts__item,
+.del__item{
+	padding: 10px;
+	border-bottom: 1px solid #ff1493;
+}
+.main-nav__link--contacts:hover + .contacts,
+.main-nav__link--del:hover + .del{
+	display: block;
+}

@@ -1,0 +1,60 @@
+.cube {
+    margin: 0 auto;
+    position: relative;
+    width: 800px;
+  }
+ 
+.cubespinner  {
+    margin: 15px auto;
+    height: 68px;
+    width: 68px;
+    position: absolute;
+    &:hover{
+    animation: spincube 10s infinite;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    }
+}
+ 
+.face {
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px #8ecbde, 0 0 2px #fff;
+    height: 68px;
+    position: absolute;
+    width: 68px;
+    background-color: #ff1493;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 20px;
+    letter-spacing: 2px;
+}
+ 
+.face span{
+  font-family: "DisneyPark";
+  color: #000;
+}
+.face:nth-child(1) {transform: translateZ(12px);}
+.face:nth-child(2) {transform: rotateY(90deg) translateZ(12px);}
+.face:nth-child(3) {transform: rotateY(90deg) rotateX(90deg) translateZ(12px);}
+.face:nth-child(4) {transform: rotateY(180deg) rotateZ(90deg) translateZ(12px);}
+.face:nth-child(5) {transform: rotateY(-90deg) rotateZ(90deg) translateZ(12px);}
+.face:nth-child(6) {transform: rotateX(-90deg) translateZ(12px);}
+ 
+@-webkit-keyframes spincube {
+from,to {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+16% {transform: rotateY(-90deg);}
+33% {transform: rotateY(-90deg) rotateZ(90deg);}
+50% {transform: rotateY(-180deg) rotateZ(90deg);}
+66% {transform: rotateY(-270deg) rotateX(90deg);}
+83% {transform: rotateX(90deg);}
+}
+ 
+@keyframes spincube {
+from,to {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+16% {transform: rotateY(-90deg);}
+33% {transform: rotateY(-90deg) rotateZ(90deg);}
+50% {transform: rotateY(-180deg) rotateZ(90deg);}
+66% {transform: rotateY(-270deg) rotateX(90deg);}
+83% {transform: rotateX(90deg);}
+}

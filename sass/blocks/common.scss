@@ -1,0 +1,47 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,*::before,*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body{
+  min-width: 530px;
+  max-width: 1400px;
+}
+p,ul,h1,h2,h3,h4,h5{
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "DisneyPark";
+  src: url("../fonts/DisneyPark.ttf");
+} 
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "JFRocSol_rus";
+  src: url("../fonts/JFRocSol_rus.ttf");
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; 
+}
+.land-wrapper{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: url(../html/market/img/header-bg.jpg) no-repeat;
+  min-height: 700px;
+  z-index: 1;
+}
+
+
+
+
